@@ -1,0 +1,48 @@
+<?xml version="1.0"?>
+<odoo>
+    <record id="estate_property_offer_action" model="ir.actions.act_window">
+      <field name="name">Offers</field>
+      <field name="res_model">estate.property.offer</field>
+      <field name="view_mode">tree,form</field>
+      <field name="domain">[('property_type_id', '=', active_id)]</field>
+    </record>
+    <record id="estate_property_offer_view_tree" model="ir.ui.view">
+        <field name="name" >estate.property.offer.tree</field>
+        <field name="model">estate.property.offer</field>
+        <field name="arch" type="xml">
+              <tree string="Fields" editable="top" decoration-danger="status=='refused'" decoration-success="status=='accepted'">
+                <field name="price"/>
+                <field name="partner_id"/>
+                <field name="validaty"/>
+                <field name="date_deadline"/>
+                <field name="status" invisible="1"/>
+                <button name="action_refused" attrs="{'invisible': [('status', 'in', ('accepted', 'refused'))]}" icon="fa-times" type="object"/>
+                <button name="action_accepted" attrs="{'invisible': [('status', 'in', ('accepted', 'refused'))]}" icon="fa-check" type="object"/>
+                <field name="property_type_id"/>
+              </tree>
+        </field>
+    </record>
+    <record id="estate_property_offer_view_form" model="ir.ui.view">
+      <field name="name">estate.property.offer.form</field>
+      <field name="model">estate.property.offer</field>
+      <field name="arch" type="xml">
+        <form string="CustomForm">
+          <sheet>
+            <group>
+              <notebook>
+                <page string="Offers">
+                    <field name="partner_id"/>
+                    <field name="price"/>
+                    <field name="status"/>
+                    <field name="validaty"/>
+                    <field name="date_deadline"/>
+                </page>
+              </notebook>
+            </group>
+           </sheet>
+          </form>
+        </field>
+    </record>
+
+
+</odoo>

@@ -1,0 +1,8 @@
+<?xml version="1.0"?>
+<odoo>
+	<menuitem name="Estate" id="estate_property_root">
+		<menuitem name="Advertisemets" id="estate_first_level_menu">
+			<menuitem id="estate_property_menu_action" action="estate_property_action"/>
+		</menuitem>
+	</menuitem>
+</odoo>

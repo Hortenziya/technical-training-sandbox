@@ -1,0 +1,34 @@
+<odoo>   
+  <record id="estate_property_tag" model="ir.actions.act_window">
+    <field name="name">Property Tag</field>
+    <field name="res_model">estate.property.tag</field>
+    <field name="view_mode">tree,form</field>
+    <field name="help" type="html">
+      <p class="o_view_nocontent_smiling_face">
+        Define a new lost reason
+      </p>
+    </field>
+  </record>
+
+  <record id="estate_property_tag_view_tree" model="ir.ui.view">
+        <field name="name" >estate.property.tag.tree</field>
+        <field name="model">estate.property.tag</field>
+        <field name="arch" type="xml">
+          <tree string="Fields" editable="bottom">
+            <field name="name"/>
+          </tree>
+        </field>
+  </record>
+
+  <record id="estate_property_tag_view_form" model="ir.ui.view">
+    <field name="name">estate.property.tag.form</field>
+    <field name="model">estate.property.tag</field>
+    <field name="arch" type="xml">
+        <form string="CustomForm">
+            <h1>
+              <field name="name"/>
+            </h1>
+        </form>
+      </field>
+    </record>
+</odoo>
