@@ -33,6 +33,11 @@ Offers list view are editable. Also, in offers list view the refused offers are 
 -	**Salesman** (defined during  property creation) 
 -	**Buyer** (the buyer’s name is automatically added when his offer is accepted.
 
+### Additional features
+**Users**:  The list of available properties are linked to a salesperson and displayed in their user form view.
+
+**Invoice**: When a property is sold, an invoice id issued for the buyer. Each property is invoiced with the next conditions: 6% of selling price and additional 100.00 administrative fees.
+
 ## Views
 
 ### List view
@@ -41,21 +46,19 @@ All properties by default are shown in a **list view**. It presents only availab
 ### Kanban view
 Users can choose the **Kanban properties view**, which includes next fields: expected price, best price, selling price and tags. The best price is only displayed when an offer is in status  `received`, while the selling price is only displayed when an offer is in status` accepted`. By default properties are grouped by type in this case.
 
-**Search view** allows to filter properties using: title, postcode, expected price, living area, number of bedrooms and/or facades.
+### Search view
+Allows to filter properties using: title, postcode, expected price, living area, number of bedrooms and/or facades.
 
-**Type List view** of the selected property has three fields: name, expected price and state. Property types can be ordered manually by name. Users can view all properties of the selected property type. The view has a stat button which shows the list of all offers related to properties of the given type when it is clicked on.
+### Type List view
+View of the selected property has three fields: name, expected price and state. Property types can be ordered manually by name. Users can view all properties of the selected property type. The view has a stat button which shows the list of all offers related to properties of the given type when it is clicked on.
 
-**Filters**:  ‘Available’ filter is selected by default and searching on the living area returns results where the area is larger or equal to the given value.
-
-### Other Information
-**Users**:  The list of available properties are linked to a salesperson and displayed in their user form view.
-
-**Invoice**: When a property is sold, an invoice id issued for the buyer. Each property is invoiced with the next conditions: 6% of selling price and additional 100.00 administrative fees.
+### Filters
+‘Available’ filter is selected by default and searching on the living area returns results where the area is larger or equal to the given value.
 
 ## Security
-
- - We can make employees real-estate agents or real-estate managers.
- - The admin user is a real-estate manager which has full access to all objects.
- - We have a new real-estate agent employee with no access to invoicing or administration. Real-estate agents can't update the property types or tags. They have only read access to types and tags. Agent user is not able to alter types or tags, or to delete properties, but that he can otherwise create or update properties. Also, he can not see the properties exclusive to their colleagues.
- - Employees who are not at least real-estate agents can't see the real-estate application.
- - Nobody has the right to delete properties. 
+ - Administrator can assign employees one of two groups: "real-estate agents" or "real-estate managers".
+ - Administrator user is a real-estate manager which has full access to all objects.
+ - By default new users are in the real-estate agent group with no access for invoicing or administration.
+ - Agent user is not able to change types or tags and delete properties, but is able to create or update properties. Also he can not see properties created by other agents.
+ - Employees who are not in at least real-estate agents group can't see the real-estate application.
+ - Nobody is able to delete properties.
