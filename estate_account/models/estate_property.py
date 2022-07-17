@@ -15,7 +15,8 @@ class EstateAccount(models.Model):
                 self.check_access_rule('write')
             except AccessError:
                 return self.env['account.move']
-        journal = self.env['account.move'].with_context(default_move_type='out_invoice')._get_default_journal()
+
+        journal = self.env['account.move'].sudo().with_context(default_move_type='out_invoice')._get_default_journal()
         invoice_vals_list = {
             'partner_id': self.buyer_id, 
             'journal_id': journal.id, 
@@ -33,4 +34,5 @@ class EstateAccount(models.Model):
                 })
             ]
         }
+        return invoice_vals_list
         self.env['account.move'].sudo().with_context(default_move_type='out_invoice').create(invoice_vals_list)

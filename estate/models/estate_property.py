@@ -37,6 +37,7 @@ class EstateProperty(models.Model):
         help="Garden Orientation is not defind")
     other_info = fields.Text('Other Info')
     estate_property_type_id = fields.Many2one("estate.property.type", string="Property type")
+    company_id = fields.Many2one('res.company', string="Company", required=True)
     buyer_id = fields.Many2one('res.partner', copy=False, string="Buyer", compute='_compute_accepted')
     seller_id = fields.Many2one('res.users', string="Salesman", default=lambda self: self.env.user)
     estate_property_tag_ids = fields.Many2many('estate.property.tag', string="Tags")

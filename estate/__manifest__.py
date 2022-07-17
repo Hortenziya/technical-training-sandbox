@@ -5,8 +5,10 @@
 	],
 	'data': [
 		'security/ir.model.access.csv',
-
-		'views/res_users.xml',
+		'security/security.xml',
+		'security/ir_rule.xml',
+		
+		'views/res_users_view.xml',
 		'views/estate_property_offer_views.xml',
 		'views/estate_property_tag_views.xml',
 		'views/estate_tag_menu_views.xml',
