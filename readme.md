@@ -61,4 +61,4 @@ View of the selected property has three fields: name, expected price and state. 
  - By default new users are in the real-estate agent group with no access for invoicing or administration.
  - Agent user is not able to change types or tags and delete properties, but is able to create or update properties. Also he can not see properties created by other agents.
  - Employees who are not in at least real-estate agents group can't see the real-estate application.
- - Nobody is able to delete properties. 
+ - Nobody is able to delete properties.
