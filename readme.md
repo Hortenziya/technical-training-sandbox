@@ -3,13 +3,13 @@
 The module allows you to register a property for sale and propose to fill out a form that includes the following fields: 
 -	**Name** (field must be filled)
 -	**Postcode**
--	**Property tags** (must be unique, can be ordered manually by name, users can choose from a list, only manager can create their own tags.  A property can have many tags and a tag can be assigned for many properties.)
--	**Available From** ( the date when property will be available to sale, by default availability date is in 3 months and won’t be copied when the record is duplicated)
--	**Property Type** (must be unique , users can choose predefined type from a list)
+-	**Property tags** (must be unique, can be ordered manually by name, users can choose from a list, only manager can create their own tags. A property can have many tags and a tag can be assigned to multiple properties.)
+-	**Available From** (the date when property will be available for sale. By default availability date is in 3 months and won’t be copied when the record is duplicated)
+-	**Property Type** (must be unique, users can choose predefined type from a list)
 -	**Expected Price** (must be strictly positive and field is required)
 -	**Selling Price** (must be strictly positive and this field is set if offer is accepted, it’s read-only and won’t be copied when the record is duplicated)
 -	**Best Offer** (the highest priced bid is automatically added to this field)
--	**Description** (the seller can provide buyers with more information)
+-	**Description** (the seller can provide additional info to the buyers)
 -	**Rooms** (2 by default)
 -	**Living area**
 -	**Facades**
@@ -17,12 +17,12 @@ The module allows you to register a property for sale and propose to fill out a 
 -	**Garden** (if garden is not marked, garden orientation and garden area are hidden)
 -	**Garden** orientation (north by default )
 -	**Garden area** (10sqm by default)
--	**Total Area** (it’s the sum of the living area and the garden area)
--	**State** (could be one of four states: new (default), offer received, offer accepted, sold and cancelled. It’s displayed using a statusbar widget which is automatically changing according to the state. Cancelled property can’t be sold and sold property can’t be cancelled.  Also, property can’t be cancelled when offer is received.  Property can be deleted if it’s state is ‘New’ or ‘Canceled’.  When the property state is ‘Offer Accepted’, ‘Sold’ or ‘Cancelled’ adding a new offer isn’t possible).
+-	**Total Area** (it’s sum of the living area and the garden area, calculated automatically)
+-	**State** (could be one of four states: "New" (default), "Offer received", "Offer accepted", "Sold" and "Cancelled". It’s displayed using a statusbar widget which is automatically changed according to the state. "Cancelled" properties can’t be sold and "Sold" properties can’t be cancelled.  Also, property can’t be cancelled when status is "Offer received".  Property can be deleted if it’s state is "New" or "Canceled".  When the property state is "Offer Accepted", "Sold" or "Cancelled" adding a new offer isn’t possible).
 
 ## Offers
 
--	**Status** (could be ‘accepted’ , ‘refused’ or  invisible.  When offer is accepted, it is marked by green color and when refused – by red one. The buttons ‘refuse’ and ‘accept’  are invisible once the offer state is set);
+-	**Status** (could be "Accepted" , "Refused" or "Invisible".  When offer is accepted, it is marked by green color and when refused – by red one. The buttons ‘refuse’ and ‘accept’  are invisible once the offer state is set);
 -	**Buyer’s name** (can’t be copied);
 -	**Price** (the bid price can’t be lower than 90% of the property expected price and lower than in existing offers);
 -	**Period of the offer availability** (by default it is 7 days and can be changed in two ways:  specify the number of days or select a period using the calendar).
