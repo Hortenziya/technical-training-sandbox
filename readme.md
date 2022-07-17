@@ -54,8 +54,8 @@ Users can choose the **Kanban properties view**, which includes next fields: exp
 
 ## Security
 
- - we can make employees real-estate agents or real-estate managers.
- - the admin user is a real-estate manager which has full access to all objects.
- - we have a new real-estate agent employee with no access to invoicing or administration. Real-estate agents can't update the property types or tags. They have only read access to types and tags. Agent user is not able to alter types or tags, or to delete properties, but that he can otherwise create or update properties. Also, he can not see the properties exclusive to their colleagues.
+ - We can make employees real-estate agents or real-estate managers.
+ - The admin user is a real-estate manager which has full access to all objects.
+ - We have a new real-estate agent employee with no access to invoicing or administration. Real-estate agents can't update the property types or tags. They have only read access to types and tags. Agent user is not able to alter types or tags, or to delete properties, but that he can otherwise create or update properties. Also, he can not see the properties exclusive to their colleagues.
  - Employees who are not at least real-estate agents can't see the real-estate application.
  - Nobody has the right to delete properties. 
